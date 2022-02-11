@@ -3,7 +3,7 @@
 __author__ = 'david.tang'
 
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, TOP, LEFT, RIGHT, END
 from tkinter.filedialog import *
 import tkinter.messagebox
 import pymysql
@@ -22,12 +22,12 @@ class Search(ttk.Frame):
         frame6 = ttk.Frame(self)
         win.title("车牌数据库查询")
         # win.minsize(920, 600)
-        self.s1 = StringVar()
-        self.s2 = StringVar()
-        self.s3 = StringVar()
-        self.s4 = StringVar()
-        self.s5 = StringVar()
-        self.s6 = StringVar()
+        self.s1 = tk.StringVar()
+        self.s2 = tk.StringVar()
+        self.s3 = tk.StringVar()
+        self.s4 = tk.StringVar()
+        self.s5 = tk.StringVar()
+        self.s6 = tk.StringVar()
 
         frame00.pack(side=TOP, fill=tk.Y, expand=1)
         frame0.pack(side=TOP, fill=tk.Y, expand=1)
@@ -38,7 +38,7 @@ class Search(ttk.Frame):
         frame6.pack(side=TOP, fill=tk.Y, expand=1)
         frame5.pack(side=TOP, fill=tk.Y, expand=1)
 
-        self.t = Text(frame00, width=100)
+        self.t = tk.Text(frame00, width=100)
         self.t.pack()
         self.t.insert('1.0', "此处显示查询结果\n")
 
@@ -84,18 +84,18 @@ class Search(ttk.Frame):
     def sql(self):
         self.t.delete(1.0, END)
         NAME1 = self.input0.get() or "localhost"
-        USRE1 = self.input1.get() or "python"
-        PASS1 = self.input2.get() or "Python12345@"
-        SQLNAME1 = self.input3.get() or "chepai"
+        USRE1 = self.input1.get() or "root"
+        PASS1 = self.input2.get() or ",=6_t2G:i5(h"
+        SQLNAME1 = self.input3.get() or "plate_ocr"
         TABLENAME1 = self.input4.get() or "CARINFO"
         self.select_sql(NAME1, USRE1, PASS1, SQLNAME1, TABLENAME1)
 
     def sql2(self):
         self.t.delete(1.0, END)
         NAME1 = self.input0.get() or "localhost"
-        USRE1 = self.input1.get() or "python"
-        PASS1 = self.input2.get() or "Python12345@"
-        SQLNAME1 = self.input3.get() or "chepai"
+        USRE1 = self.input1.get() or "root"
+        PASS1 = self.input2.get() or ",=6_t2G:i5(h"
+        SQLNAME1 = self.input3.get() or "plate_ocr"
         TABLENAME1 = self.input4.get() or "CARINFO"
         CARPLA1 = self.input5.get()
         if (CARPLA1==""):

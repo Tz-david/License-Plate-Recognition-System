@@ -5,9 +5,7 @@ __author__ = 'david.tang'
 import threading
 import time
 import tkinter as tk
-# import cv2
 import cv2
-
 import lib.img_function as predict
 import lib.img_math as img_math
 import lib.img_excel as img_excel

@@ -4,7 +4,7 @@ __author__ = 'david.tang'
 
 import threading
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, LEFT, RIGHT, TOP
 from tkinter.filedialog import *
 import tkinter.messagebox
 from PIL import Image, ImageTk, ImageGrab
@@ -49,8 +49,8 @@ class Login(ttk.Frame):
         win.title("车牌搜索系统")
         win.minsize(850, 600)
         self.center_window()
-        self.s1 = StringVar()
-        self.s2 = StringVar()
+        self.s1 = tk.StringVar()
+        self.s2 = tk.StringVar()
         self.matchflag = 0
         self.stopflag = 1
         self.pic_path = ""

@@ -3,7 +3,7 @@
 __author__ = 'david.tang'
 
 import tkinter as tk
-from tkinter import ttk, TOP, LEFT
+from tkinter import ttk, LEFT, RIGHT, TOP
 from tkinter.filedialog import *
 import tkinter.messagebox
 import pymysql
@@ -231,9 +231,9 @@ class Search(ttk.Frame):
             self.thread_run2 = True
             return
         NAME1 = "localhost"
-        USRE1 = "python"
-        PASS1 = "Python12345@"
-        SQLNAME1 = "chepai"
+        USRE1 = "root"
+        PASS1 = ",=6_t2G:i5(h"
+        SQLNAME1 = "plate_ocr"
         TABLENAME1 = "CARINFO"
         TABLENAME2 = "CARIDE"
         CARPLA1 = self.picre()
@@ -405,7 +405,7 @@ class Search(ttk.Frame):
     def create_sql2(self):
         try:
             # 打开数据库连接
-            db = pymysql.connect("localhost", "python", "Python12345@", "chepai")
+            db = pymysql.connect("localhost", "root", ",=6_t2G:i5(h@", "plate_ocr")
         except:
             print("数据库连接失败")
             return
